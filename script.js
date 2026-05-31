@@ -67,10 +67,10 @@ const path = window.location.pathname;
 
 let componentPrefix = "";
 
-if (path.includes("/pages/notes/")) {
+if (path.includes("/Pages/notes/")) {
     componentPrefix = "../../";
 }
-else if (path.includes("/pages/")) {
+else if (path.includes("/Pages/")) {
     componentPrefix = "../";
 }
 
