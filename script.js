@@ -63,22 +63,25 @@ function toggleBranches(){
     }
 }
 
-fetch("/components/sidebar.html")
+const path = window.location.pathname;
 
+let componentPrefix = "";
+
+if (path.includes("/pages/notes/")) {
+    componentPrefix = "../../";
+}
+else if (path.includes("/pages/")) {
+    componentPrefix = "../";
+}
+
+fetch(componentPrefix + "components/sidebar.html")
 .then(response => response.text())
-
 .then(data => {
-
     document.getElementById("sidebar-container").innerHTML = data;
-
 });
 
-fetch("/components/footer.html")
-
+fetch(componentPrefix + "components/footer.html")
 .then(response => response.text())
-
 .then(data => {
-
     document.getElementById("footer-container").innerHTML = data;
-
 });
