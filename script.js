@@ -40,3 +40,45 @@ document.addEventListener("click", function(event){
     }
 
 });
+
+function toggleBranches(){
+
+    let branches = document.getElementById("moreBranches");
+
+    let button = document.querySelector(".view-more-btn");
+
+
+    if(branches.style.display === "grid"){
+
+        branches.style.display = "none";
+
+        button.innerHTML = "View More ▼";
+    }
+
+    else{
+
+        branches.style.display = "grid";
+
+        button.innerHTML = "View Less ▲";
+    }
+}
+
+fetch("/components/sidebar.html")
+
+.then(response => response.text())
+
+.then(data => {
+
+    document.getElementById("sidebar-container").innerHTML = data;
+
+});
+
+fetch("/components/footer.html")
+
+.then(response => response.text())
+
+.then(data => {
+
+    document.getElementById("footer-container").innerHTML = data;
+
+});

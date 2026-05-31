@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Semester Branches</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="left-header">
+
+            <div class="menu-btn" onclick="toggleMenu(event)">
+                ☰
+            </div>
+
+            <h1>Semester Branches</h1>
+
+        </div>
+
+
+        <div class="right-header">
+
+            Select Branch
+
+        </div>
+
+    </header>
+
+
+    <!-- SIDEBAR -->
+
+    <div id="sidebar-container"></div>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content full-width-page">
+
+        <section class="card branch-card">
+
+            <h2>Branches</h2>
+
+
+            <div class="branch-grid">
+
+                <a href="#" class="branch-box">
+                    CS Engineering
+                </a>
+
+                <a href="#" class="branch-box">
+                    Electrical Engineering
+                </a>
+
+                <a href="#" class="branch-box">
+                    Electronics Engineering
+                </a>
+
+                <a href="#" class="branch-box">
+                    Mechanical Engineering
+                </a>
+
+            </div>
+
+
+            <!-- HIDDEN BRANCHES -->
+
+            <div class="branch-grid hidden-branches" id="moreBranches">
+
+                <a href="#" class="branch-box">
+                    Civil Engineering
+                </a>
+
+                <a href="#" class="branch-box">
+                    Biotechnology
+                </a>
+
+                <a href="#" class="branch-box">
+                    Chemical Technology
+                </a>
+
+                <a href="#" class="branch-box">
+                    Food Technology
+                </a>
+
+            </div>
+
+
+            <!-- BUTTON -->
+
+            <button class="view-more-btn" onclick="toggleBranches()">
+
+                View More ▼
+
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <div id="footer-container"></div>
+
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>
