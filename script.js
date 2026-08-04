@@ -77,7 +77,27 @@ else if (path.includes("/Pages/")) {
 fetch(componentPrefix + "components/sidebar.html")
 .then(response => response.text())
 .then(data => {
+
     document.getElementById("sidebar-container").innerHTML = data;
+
+    // Base path for GitHub Pages
+    const BASE =
+        window.location.hostname === "127.0.0.1" ||
+        window.location.hostname === "localhost"
+            ? ""
+            : "/Web_Portal";
+
+    function setLink(id, path) {
+        const element = document.getElementById(id);
+        if (element) {
+            element.href = BASE + path;
+        }
+    }
+
+    setLink("homeLink", "/index.html");
+    setLink("pyqLink", "/Pages/pyq.html");
+    setLink("firstYearLink", "/Pages/notes/firstyear.html");
+
 });
 
 fetch(componentPrefix + "components/footer.html")
